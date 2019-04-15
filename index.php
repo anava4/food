@@ -23,12 +23,12 @@ $f3->route('GET /', function()
     echo $view->render('views/home.html');
 });
 
-//Define a breakfast route
-$f3->route('GET /breakfast', function()
+//Define a continental breakfast route
+$f3->route('GET /breakfast/continental', function()
 {
     //Display breakfast view
     $view = new Template();
-    echo $view->render('views/breakfast.html');
+    echo $view->render('views/bfast-cont.html');
 }
 );
 
@@ -38,6 +38,15 @@ $f3->route('GET /lunch', function()
     //Display breakfast view
     $view = new Template();
     echo $view->render('views/lunch.html');
+}
+);
+
+//Define a brunch route
+$f3->route('GET /lunch/brunch/buffet', function()
+{
+    //Display brunch view
+    $view = new Template();
+    echo $view->render('views/buffet.html');
 }
 );
 
