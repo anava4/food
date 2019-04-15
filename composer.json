@@ -1,0 +1,13 @@
+{
+  "name": "anava4/328/food",
+  "authors": [
+    {
+      "name": "Andrew Nava",
+      "email": "anava4@mail.greenriver.edu"
+    }
+  ],
+  "require":
+  {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
