@@ -1,4 +1,6 @@
 <?php
+//Start a session
+session_start();
 
 //Turn on error reporting
 ini_set('display_errors',1);
@@ -6,6 +8,7 @@ error_reporting(E_ALL);
 
 //Require the autoload file
 require_once('vendor/autoload.php');
+
 
 
 //Create an instance of the Base class
@@ -96,6 +99,16 @@ $f3->route('GET /order', function()
     echo $view->render('views/form1.html');
 }
 );
+
+//Define a order-process route
+$f3->route('POST /order-process', function()
+{
+    //print_r($_POST);
+    $_SESSION['food'] = $_POST['food'];
+    //Display order received view
+    $view = new Template();
+    echo $view->render('views/form2.html');
+});
 
 
 //Run fat free
