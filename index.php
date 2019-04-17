@@ -110,6 +110,16 @@ $f3->route('POST /order-process', function()
     echo $view->render('views/form2.html');
 });
 
+//Define a order-process route
+$f3->route('POST /summary', function()
+{
+    //print_r($_POST);
+    $_SESSION['meal'] = $_POST['meal'];
+    //Display order received view
+    $view = new Template();
+    echo $view->render('views/summary.html');
+});
+
 
 //Run fat free
 $f3->run();
