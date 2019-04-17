@@ -5,6 +5,10 @@
     <title>Order Receipt</title>
 </head>
 <body>
-    <h2>Order Received!</h2>
+    <h1>Order Received!</h1>
+<!--    <h2>You ordered {{@SESSION.food}}</h2>-->
+    <form method="post" action="summary">
+        <label>What meal would you like? <input type="text" name="meal"></label> <button type="submit">Place Order</button>
+    </form>
 </body>
 </html>
